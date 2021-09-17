@@ -53,4 +53,4 @@ jobs:
         app-name: 'angularappdb'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_8d74f92d752e47fdb66a50975ddc4f96 }}
-        package: .
+        package: ./dist/angularappdb
