@@ -1,0 +1,40 @@
+<div class="row pt-5">
+    <div class="col-md-6 mx-auto">
+        <div class="card rounded-0">
+            <div class="card-header">
+                <h3 class="mb-0">Register</h3>
+            </div>
+            <mat-card>
+                <form (submit)="OnSignUp(signUpForm)" #signUpForm ="ngForm">
+                    <mat-form-field  class="col-md-6" >
+                        <input matInput name="name" ngModel Type="text"  placeholder="name" #nameInput="ngModel" required> 
+                        <mat-error *ngIf="passwordInput.invalid"></mat-error>  
+                    </mat-form-field>
+                      <br>
+                      <mat-form-field  class="col-md-6" >
+                        <input matInput name="jobTitle" ngModel Type="text"  placeholder="jobTitle" #jobTitleInput="ngModel" required> 
+                        <mat-error *ngIf="passwordInput.invalid"></mat-error>
+                      </mat-form-field>
+                      <br>
+                      <mat-form-field  class="col-md-6" >
+                        <input matInput name="ContactNumber" ngModel Type="text"  placeholder="ContactNumber" #contactNumberInput="ngModel" required> 
+                        <mat-error *ngIf="passwordInput.invalid"></mat-error>
+                      </mat-form-field>
+                      <br>
+                    <mat-form-field class="col-md-6" >
+                        <input matInput name="email" ngModel type="email"  placeholder="Email" #emailInput="ngModel" required>
+                        <mat-error *ngIf="emailInput.invalid">Enter the valid Email</mat-error>
+                      </mat-form-field>
+                      <br>
+                      <mat-form-field  class="col-md-6" >
+                        <input matInput name="password" ngModel Type="password"  placeholder="Password" #passwordInput="ngModel" required> 
+                        <mat-error *ngIf="passwordInput.invalid">Enter the valid Password</mat-error>
+                      </mat-form-field>
+                      <br>
+                      <br>
+                      <button type="submit" mat-raised-button color="accent">SignUp</button>
+                </form>
+            </mat-card>
+        </div>
+    </div>
+</div>

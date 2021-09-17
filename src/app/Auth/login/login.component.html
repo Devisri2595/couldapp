@@ -1,0 +1,25 @@
+<div class="row pt-5">
+    <div class="col-md-6 mx-auto">
+        <div class="card rounded-0">
+            <div class="card-header">
+                <h3 class="mb-0">Login</h3>
+            </div>
+            <mat-card>
+                <mat-spinner *ngIf="isLoading"></mat-spinner>
+                <form (submit)="Login(loginForm)" #loginForm ="ngForm" *ngIf="!isLoading">
+                    <mat-form-field class="col-md-6" >
+                        <input matInput name="email" ngModel type="email"  placeholder="Email" #emailInput="ngModel" required>
+                        <mat-error *ngIf="emailInput.invalid">Enter the valid Email</mat-error>
+                      </mat-form-field>
+                      <br>
+                      <mat-form-field  class="col-md-6">
+                        <input matInput name="password" ngModel Type="password"  placeholder="Password" #passwordInput="ngModel" required> 
+                        <mat-error *ngIf="passwordInput.invalid">Enter the valid Password</mat-error>
+                      </mat-form-field>
+                      <br>
+                      <button type="submit" mat-raised-button color="accent" *ngIf="!isLoading">Login</button>
+                </form>
+            </mat-card>
+        </div>
+    </div>
+</div>

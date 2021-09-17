@@ -1,0 +1,39 @@
+<br>
+<!-- <mat-card class="example-card" *ngFor="let item of itemCount; let i=index">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>Sathish Arumugam</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p> Email: sathisharumugamksrct@gmail.com</p><br>
+    <p> Phone Number: 9983998332</p>
+    </mat-card-content>
+</mat-card> -->
+<div class="container" id="main-container">
+    <div class="row">
+      <div *ngFor="let employee of employees" class="col-md-6 col-xl-3">
+         <div class="card m-b-30">
+            <div class="card-body row">
+               <div class="col-6 rcorners1">
+                  <!-- <a href=""><img src="" alt="No Image" class="img-fluid rounded-circle w-60"></a> -->
+               A
+               </div>
+               <div class="col-6 card-title align-self-center mb-0">
+                  <h3>{{employee.name}}</h3>
+                  <p class="m-0">{{employee.jobtitle}}</p>
+               </div>
+            </div>
+            <ul class="list-group list-group-flush">
+               <li class="list-group-item"><i class="fa fa-envelope float-right"></i>{{employee.email}}</li>
+               <li class="list-group-item"><i class="fa fa-phone float-right"></i>Phone : {{employee.contactnumber}}</li>
+            </ul>
+            <div class="card-body">
+               <div class="float-right btn-group btn-group-sm">
+                  <a  class="btn btn-primary tooltips"><mat-icon class="customIconSize">edit</mat-icon></a>
+                  <a  class="btn btn-secondary tooltips"><mat-icon class="customIconSize"> delete</mat-icon></a>
+               </div>
+            </div>
+         </div>
+      </div>
+    </div>
+</div>
