@@ -5,7 +5,7 @@ const app =express();
 const mongoose= require("mongoose");
 const user = require("./Routes/user");
 
-mongoose.connect("mongodb+srv://user1:LKgrW0I5TQ7jWiur@cluster0.ylsjs.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+mongoose.connect("mongodb://devi:W5PnnnDnNodssxiMm7n07VvEeV1bxhWtmMnT2qTZPkNHyblu6lBbIWw5zb3Gn6hb8B0LIxwMxV4YPLiWCkPoWg==@devi.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@devi@")
 .then(()=>{
     console.log("Connected to Database");
     })
