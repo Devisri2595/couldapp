@@ -28,7 +28,7 @@ export class AuthService {
     // .subscribe((responsedata)=>{
     //     console.log(responsedata);
     // });
-    this.http.post<{ token: String,expiresIn:number,userid:String }>('http://localhost:3000/api/user/Login', AuthDataLogin)
+    this.http.post<{ token: String,expiresIn:number,userid:String }>('https://cloudbackend1.azurewebsites.net/api/user/Login', AuthDataLogin)
       .subscribe(response => {
         // console.log("Responsessss"+response);
         // console.log(response.expiresIn)
@@ -131,7 +131,7 @@ export class AuthService {
     };
     // console.log("pass:" + AuthDataRegister.password);
 
-    this.http.post<{ message: String }>('http://localhost:3000/api/user/Register', AuthDataRegister)
+    this.http.post<{ message: String }>('https://cloudbackend1.azurewebsites.net/api/user/Register', AuthDataRegister)
       .subscribe(response => {
         this.Router.navigate(["/login"]);
         // console.log(response);
