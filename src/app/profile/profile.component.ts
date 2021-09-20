@@ -19,7 +19,7 @@ export class ProfileComponent implements OnInit {
   
   ngOnInit(): void {
 
-      this.http.get<any>('http://localhost:3000/api/user/userdata/'+this.AuthService.getUserId())
+      this.http.get<any>('https://cloudbackend1.azurewebsites.net/api/user/userdata/'+this.AuthService.getUserId())
       .subscribe(response=>{
         this.first_name=response.Data.first_name;
         this.last_name=response.Data.last_name,
