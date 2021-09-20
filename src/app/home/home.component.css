@@ -1,0 +1,8 @@
+.example1 {
+
+    height: auto;
+    width: 1686px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: cover;
+  }

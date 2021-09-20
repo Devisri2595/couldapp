@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg" style="background-color: white;">
+  
+  <a class="navbar-brand nav-link" routerLink="/home" class="predef1"><img [src]=image alt="image" style="width: 50px;">&nbsp;&nbsp;CONFERNCE CREATIVITY </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+    <span class="navbar-toggler-icon"></span>
+  </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" class="predef"  routerLink="/events">Events</a>
+      </li>&nbsp;&nbsp;
+      <li class="nav-item">
+        <a class="nav-link" class="predef" routerLink="/members">Members</a>
+      </li>
+    </ul>
+    <nav class="navbar navbar-expand-lg">
+      <ul class="navbar-nav" *ngIf="!userAuthenticated">
+          <a class="nav-link" class="predef" routerLink="/login">Login</a>&nbsp;&nbsp;
+          <a class="nav-link" class="predef" routerLink="/Register">Register</a>
+      </ul>
+      <ul class="navbar-nav" *ngIf="userAuthenticated">
+        <a class="nav-link" class="predef" routerLink="/profile">Profile</a>&nbsp;&nbsp;
+        <button class="predef"  (click)="logOut()">Sign Out</button>    
+    </ul>
+  </nav>
+  </div> 
+</nav>
+<!-- <hr style="width: 100%;border: 1px solid black;"> -->
+<div style="height: 100%;">
+  <router-outlet></router-outlet>
+</div>

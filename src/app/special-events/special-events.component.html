@@ -1,0 +1,30 @@
+
+<div style="background-color: whitesmoke;height: 100%;">
+   <br>
+    <div class="row" >
+      <div *ngFor="let employee of employees" class="col-md-6 col-xl-3" style="margin-bottom: 6px;">
+         <div class="card m-b-30">
+            <div class="card-body row">
+               <!-- <div class="col-6 rcorners1"> -->
+                  <!-- <a href=""><img src="" alt="No Image" class="img-fluid rounded-circle w-60"></a> -->
+               <!-- A
+               </div> -->
+               <div class="col-12 card-title align-self-center ">
+                  <h5>{{employee.first_name}}&nbsp;{{employee.last_name}}</h5>
+                  <p class="m-0">{{employee.designation}}</p>
+               </div>
+            </div>
+            <ul class="list-group">
+               <li class="list-group-item"><i class="fa fa-envelope float-right"></i>E-mail: {{employee.email}}</li>
+               <li class="list-group-item"><i class="fa fa-phone float-right"></i>Phone : {{employee.contactnumber}}</li>
+            </ul>
+            <!-- <div class="card-body">
+               <div class="float-right btn-group btn-group-sm">
+                  <a  class="btn btn-primary tooltips"><mat-icon class="customIconSize">edit</mat-icon></a>
+                  <a  class="btn btn-secondary tooltips"><mat-icon class="customIconSize"> delete</mat-icon></a>
+               </div>
+            </div> -->
+         </div>
+      </div>
+    </div>
+</div>

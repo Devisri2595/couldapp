@@ -1,0 +1,25 @@
+.example-card {
+    max-width: fit-content;
+    height: fit-content;
+  }
+  
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+
+  .customIconSize {
+    height: fit-content ;
+    width: fit-content ;
+    font-size: 15px;
+}
+
+.rcorners1 {
+  border-radius: 100px;
+  background: #73AD21;
+  padding: 15px; 
+  width: 55px;
+  height: 60px;  
+  text-align: center;
+  font-size: 50px;
+}
