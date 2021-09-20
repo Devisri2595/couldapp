@@ -17,7 +17,7 @@ export class AuthService{
         // .subscribe((responsedata)=>{
         //     console.log(responsedata);
         // });
-        this.http.post<{token:String}>('http://localhost:3000/api/user/Login',AuthDataLogin)
+        this.http.post<{token:String}>('https://cloudbackend1.azurewebsites.net/api/user/Login',AuthDataLogin)
         .subscribe(response=>{
             console.log(response);  
         });
@@ -31,7 +31,7 @@ export class AuthService{
             contactNumber:ContactNumber,
           };
       
-          this.http.post<{message:String}>('http://localhost:3000/api/user/Register',AuthDataRegister)
+          this.http.post<{message:String}>('https://cloudbackend1.azurewebsites.net/api/user/Register',AuthDataRegister)
           .subscribe(response=>{
             console.log(response);
           });
