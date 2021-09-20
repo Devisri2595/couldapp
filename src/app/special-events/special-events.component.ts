@@ -11,7 +11,7 @@ export class SpecialEventsComponent implements OnInit {
     constructor(private http:HttpClient) { }
 
   ngOnInit(): void {
-               this.http.get<any>('http://localhost:3000/api/user/data')
+               this.http.get<any>('https://cloudbackend1.azurewebsites.net/api/user/data')
         .subscribe((responsedata)=>{
           this.employees=responsedata.Data;
             // console.log(responsedata);
